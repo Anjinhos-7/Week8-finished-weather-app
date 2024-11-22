@@ -21,6 +21,8 @@ function displayTemperature(response) {
 
   time.innerHTML = formatDate(date);
   icon.innerHTML = `<img src="${response.data.condition.icon_url}" class="current-temperature-icon" />`;
+
+  getForecast(response.data.city);
 }
 
 function formatDate(date) {
